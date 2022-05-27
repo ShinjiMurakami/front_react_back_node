@@ -4,9 +4,7 @@ files:
   - source: /
     destination: /home/ec2-user/front_react_back_node/
 hooks:
-  BeforeInstall:
-    - location: before_install.sh
-      runas: root
-  AfterInstall:
-    - location: after_install.sh
+  ApplicationStart:
+    - location: restart.sh
+      timeout: 180
       runas: root
