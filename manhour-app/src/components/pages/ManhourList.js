@@ -20,7 +20,7 @@ export default class App extends React.Component {
     super(props);
     this.state = { posts: [] };
 
-    fetch("http://manhour-plottype-dev.ml:4000/posts")
+    fetch("http://manhour-plottype-stg.ml:4000/posts")
       .then(response => response.json())
       .then(posts => (this.setState({ posts })));
   }
